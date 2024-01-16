@@ -12,27 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from typing import Any
+
+import numpy as np
+
 import streamlit as st
-from streamlit.logger import get_logger
-
-LOGGER = get_logger(__name__)
+from streamlit.hello.utils import show_code
 
 
-def run():
+def main():
     st.set_page_config(
         page_title="Hello",
         page_icon="👋",
     )
-
-    st.write("# One-Year Sonology Course Application")
-
+    st.write("# Audio Recordings")
     st.sidebar.success("Select a demo above.")
-
-    st.markdown(
-        """
-      ## Motivation"""
-    )
-
-
-if __name__ == "__main__":
-    run()
